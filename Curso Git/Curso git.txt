@@ -1,0 +1,77 @@
+Configuracion de perfil
+$ git config --global user.name "Mauro"
+$ git config --global user.email "mauro.pererios@gmail.com"
+
+Rama main
+$ git config --global init.defaultBranch main
+
+Crear repositorio
+git init + path (si no estamos en el directorio
+git init (si ya estamos en el directorio)
+
+¿En que estado está el repositorio? 
+git status
+
+Añade y modificar archivos 
+git add <file>
+git add . (todo)
+
+Para confirmar/registrar los cambios 
+git commit -m "mensaje"
+
+Ver historial de commits
+git log
+
+Volver temporalmente a un commit anterior [para ver que hay en ese punto pero no para trabajar]
+git checkout <commit-hash>
+para volver de la "vista" 
+git checkout main
+
+Volver definitivamente a un commit anterior
+git reset --hard <commit-hash>
+
+Crear una nueva rama a partir de un commit anterior [para trabajar en ramas paralelas]
+git checkout -b <new-branch-name> <commit-hash>
+
+Crear claves ssh (publica o privada) para autentificación
+ssh-keygen -t ed25519 -f ~/.ssh/github_key
+
+Linkear repo git con repo GitHub
+git remote add origin <path de GitHub>
+
+
+Para poner a funcionar un acceso nuevo ssh
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/github_key
+
+
+Una vez linkeado y si no hemos renombrado la rama (main)
+git branch -M main
+si no
+git push -u origin main
+
+Para clonar un repositorio remoto 
+git clone <git@github.com:MauroGins/taller.git>
+
+///////////TRABAJO COLABORATIVO//////////
+
+actualizar el repositorio local descargando las novedades del remoto
+git pull
+
+ver ramas 
+git branch
+crear nueva rama
+git branch <name>
+caminar entre ramas (cambiarse)
+git checkout <name>
+
+
+Tag (se agrega al ultimo commit hecho)
+git tag <"tag-name">
+
+Se suben de manera independiente
+git push --tags (no se envian cosas nuevas, solo los tags)
+
+Integrar en la rama de trabajo y hace una fusión
+tienes que ir a la rama que quieres hacer el update
+git merge <branch(rama integrada)>
