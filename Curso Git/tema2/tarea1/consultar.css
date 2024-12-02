@@ -1,0 +1,18 @@
+body
+{
+	background-color: White;
+	font-family: serif;
+	color: #003E80;
+	margin: 50px;
+	text-align: center;
+}
+table{    
+        margin:0px auto;
+}
+table td, table th{    
+        background-color: #003E80;
+	color: White;
+}
+.erro{
+	color: Red;
+}
